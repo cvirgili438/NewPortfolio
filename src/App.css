@@ -1,3 +1,12 @@
+@import url(theme.css);
+body{
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+.darkmode{
+  color: var(--color-darkmode-primary);
+  background-color: var(--color-darkmode-secondary);
+}
 .App {
   text-align: center;
 }
@@ -35,4 +44,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*  
+Phone querys
+*/
+@media screen and (max-width:768px){
+    
 }

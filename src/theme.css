@@ -1,0 +1,12 @@
+/* .theme {
+    color: springgreen;
+    background-color: #43636a;
+  }
+   */
+
+  :root{
+    --color-primary: blueviolet;
+  --color-secondary: #f3eee0;
+  --color-darkmode-primary:  blueviolet;
+  --color-darkmode-secondary:black;
+  }
