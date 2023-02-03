@@ -45,7 +45,15 @@ body{
     transform: rotate(360deg);
   }
 }
-
+.hidden{
+  opacity: 0;
+  filter: blur(5px);  
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);  
+}
 /*  
 Phone querys
 */
