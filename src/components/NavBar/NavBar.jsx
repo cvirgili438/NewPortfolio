@@ -5,14 +5,23 @@ import { BsMenuUp } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { BiHomeHeart } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { GrLanguage } from "react-icons/gr";
+import { useDispatch, useSelector } from 'react-redux';
+import { changeLanguage } from '../../Redux/Action'
 
 
 
 export default function NavBar() {
     const [active,setActive] = React.useState(false)
+    const dispatch = useDispatch()
     const handleShow = ()=>{
         setActive(!active)
-    }
+    }    
+    const english = useSelector(state=>state.english)
+    const handleLanguage = ()=>{
+        dispatch(changeLanguage(!english))
+        setActive(!active)
+      }
 
   return (
     <header className={style.nav}>
@@ -32,6 +41,7 @@ export default function NavBar() {
                     </Link></li>
                 <li className={style.nav_li}>para</li>
                 <li className={style.nav_li}>probar</li>
+                <li onClick={handleLanguage} className={style.nav_li}><GrLanguage className={style.nav_icon}/>{english?'Cambiar idioma':'Change Language'}</li>
                 
             </ul>
             

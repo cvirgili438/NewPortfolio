@@ -1,0 +1,17 @@
+.about_container{
+    display: inline-block;
+    position:relative;
+}
+@media screen and (max-width:767px) {
+    .toHide{
+        animation-name: toHide;
+        animation-duration: 1s;
+        opacity: 0;
+    }
+    .toView{
+        display:block;
+        animation-name: toView;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+  }

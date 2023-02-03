@@ -54,6 +54,38 @@ body{
   opacity: 1;
   filter: blur(0);  
 }
+
+
+@keyframes toView {
+  0%{
+      opacity: 0;        
+  }
+  100%{
+      opacity: 1;
+  }
+}
+@keyframes toHide{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      display: none;
+  }
+}
+
+.toHide{
+  animation-name: toHide;
+  animation-duration: 1s;
+  opacity: 0;
+}
+.toView{
+  display:flex;
+  animation-name: toView;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
 /*  
 Phone querys
 */
