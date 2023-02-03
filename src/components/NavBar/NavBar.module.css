@@ -1,0 +1,106 @@
+.nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background-color:var(--color-primary);
+    color: var(--color-secondary);
+  }
+  
+  .nav_container{
+    max-width:768px;
+    margin-left:1.5rem;
+    margin-right:1.5rem;
+    height: 3rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .show_menu{
+    top:0 !important
+  }
+  .nav_li{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .813rem;
+  
+  font-weight: 500;
+  }
+  
+  
+  /* for small divices */
+  
+  @media screen and (max-width:350px) {
+    
+    .nav_menu{
+      padding: 2rem .25rem 4rem;
+    }
+    .nav_ul{
+      column-gap: 0;
+    }
+    
+  }
+  
+  @media screen and (max-width:767px) {
+    .nav_menu{
+      position:fixed;
+      top:-100%;
+      left:0;
+      width: 100%;
+      background-color: var(--color-primary);
+      padding:2rem 1.5rem 4rem;
+      box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+      border-radius: 0 0 2rem 2rem;
+      transition: .5s
+    }
+    .nav_ul{
+        display:grid;
+        gap:2rem;
+        grid-template-columns:repeat(3,1fr);
+    }
+  }
+  /* for medium divices */
+  
+  @media screen and (min-width:768px) {
+    .nav{
+      top:0;
+      bottom: initial;
+      padding: 0 1rem;
+    }
+    .nav_container{
+      height: calc(var(--header-heigth) + 1.5rem);
+      column-gap: 1rem;
+    }
+    .nav_icon,.nav_close,.nav_toggle{
+      display: none !important;
+    }
+  
+    .nav_ul{
+      display: flex;
+      column-gap: 2rem;
+    }
+    .nav_menu{
+      margin-left: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  /* for large divices */
+  
+  @media screen and (min-width:1024px) {
+    .nav{
+      padding:0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .nav_container{
+      margin-right: 0;
+      max-width: 100% ;
+    }
+    .nav_ul{
+      margin-right: 0;
+    }
+    
+  }
