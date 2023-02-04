@@ -8,6 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GrLanguage } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLanguage } from '../../Redux/Action'
+import { hideToView } from '../../utils/function';
 
 
 
@@ -22,7 +23,19 @@ export default function NavBar() {
         dispatch(changeLanguage(!english))
         setActive(!active)
       }
-
+      React.useEffect(()=>{
+        hideToView({
+          english:english,
+          idES:'aboutLiES',
+          idEN:'aboutLiEN'
+        }) 
+        hideToView({
+            english:english,
+            idES:'languageLiES',
+            idEN:'languageLiEN'
+        })
+      
+       },[english])
   return (
     <header className={style.nav}>
       
@@ -35,13 +48,19 @@ export default function NavBar() {
             <div className={`${style.nav_menu} ${active ? style.show_menu : ''}`} id='nav_menu' >
             
             <ul className={style.nav_ul}>
-                <li className={style.nav_li} >
-                    <Link className={style.nav_link} onClick={handleShow} to='about' smooth={true}>
-                    <BiHomeHeart  className={style.nav_icon} />algo
+                <li className={style.nav_li} id='aboutLiEN' >
+                    <Link className={style.nav_link} onClick={handleShow} to='about' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />About Me
                     </Link></li>
+                <li className={style.nav_li} id='aboutLiES' >
+                    <Link className={style.nav_link} onClick={handleShow} to='about' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />About Me
+                    </Link></li>
+
                 <li className={style.nav_li}>para</li>
                 <li className={style.nav_li}>probar</li>
-                <li onClick={handleLanguage} className={style.nav_li}><GrLanguage className={style.nav_icon}/>{english?'Cambiar idioma':'Change Language'}</li>
+                <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}</li>
+                <li onClick={handleLanguage} id='languageLiEN' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Change Language'}</li>
                 
             </ul>
             
