@@ -17,15 +17,7 @@
 .h3_complete{
     transition: all 1s;
 }
-.machine_ES{   
-    
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 100vw;
-    animation: typing 2s steps(12),blink .5s infinite step-end alternate;
-    overflow: hidden;
-    
-}
+
 
 @keyframes typing {
     from {width: 0;visibility: visible;}
@@ -50,6 +42,15 @@
     .image_profile{
         border-radius:50%;
         width: 50%;
+    }
+    .machine_ES{   
+    
+        white-space: nowrap;
+        border-right: 4px solid;
+        width: 100vw;
+        animation: typing 2s steps(12),blink .5s infinite step-end alternate;
+        overflow: hidden;
+        
     }
 
   }
