@@ -1,5 +1,32 @@
+.trans{
+    transition: all 3s;
+}
+.skill_show{
+    animation-name: appear;
+    animation-duration: 2s;
+    height:300px;
 
-
+  }
+  .skill_hidden{
+       height: 0;
+    overflow: hidden;
+    animation-name: disappear;
+    animation-duration: 2s;
+  }
+@keyframes appear {
+    from{opacity: 0;}
+    to{
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 @media screen and (max-width:767px) {
     .div_superior{
         display: flex;
@@ -27,5 +54,45 @@
     }
     .arrow_down{
         font-size: 2.25rem;
+    }
+    .div_front{
+        border-bottom: 1px solid var(--color-primary);
+        box-shadow: 0px -5px 10px 1px var(--color-primary) outset;
+    }.div_back{
+        border-top: 1px solid var(--color-primary);
+        box-shadow: 0px 5px 10px 1px var(--color-primary) outset;
+    }
+    .section_img{
+        display: flex;
+
+        width: 350px;
+    }
+    .section_img img {
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+    }
+ 
+  }
+  @media screen and (min-width:768px){
+    .section_img{
+        display: flex;
+        height: 200px;
+        width: 300px;
+        
+    }
+    .section_img img {
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: 0.5s ease;
+    }
+    .section_img img:hover{
+        cursor: crosshair;
+        width: 200px;
+        opacity: 1;
+        filter: contrast(120%);
+
     }
   }

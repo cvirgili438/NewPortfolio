@@ -9,7 +9,7 @@ export const hideToView = (object)=>{
         if(elementES.classList.contains('toView')) elementES.classList.remove('toView')
         elementES.classList.add('toHide') 
         elementES.style.display='none' 
-        elementEN.style.display='flex'
+        elementEN.style.display=!object.skill ? 'flex' : 'inherit'
         if(elementEN.classList.contains('toHide')) elementEN.classList.remove('toHide')
         elementEN.classList.add('toView')     
             }
@@ -17,7 +17,7 @@ export const hideToView = (object)=>{
         if(elementEN.classList.contains('toView')) elementEN.classList.remove('toView')
         elementEN.classList.add('toHide')
         elementEN.style.display='none'
-        elementES.style.display='flex'
+        elementES.style.display=!object.skill ? 'flex' : 'inherit'
         if(elementES.classList.contains('toHide')) elementES.classList.remove('toHide')
         elementES.classList.add('toView')
 
