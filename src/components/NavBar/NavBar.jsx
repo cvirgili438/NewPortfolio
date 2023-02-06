@@ -54,7 +54,7 @@ export default function NavBar() {
                     </Link></li>
                 <li className={style.nav_li} id='aboutLiES' >
                     <Link className={style.nav_link} onClick={handleShow} to='about' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />About Me
+                    <BiHomeHeart  className={style.nav_icon} />Sobre Mi
                     </Link></li>
 
                 <li className={style.nav_li}>para</li>

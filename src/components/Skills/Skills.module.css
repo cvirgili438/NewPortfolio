@@ -1,18 +1,7 @@
 .trans{
     transition: all 3s;
 }
-.skill_show{
-    animation-name: appear;
-    animation-duration: 2s;
-    height:300px;
 
-  }
-  .skill_hidden{
-       height: 0;
-    overflow: hidden;
-    animation-name: disappear;
-    animation-duration: 2s;
-  }
 @keyframes appear {
     from{opacity: 0;}
     to{
@@ -72,13 +61,59 @@
         flex-grow: 1;
         object-fit: cover;
     }
- 
+    .skill_show{
+        animation-name: appear;
+        animation-duration: 2s;
+        height:300px;
+    
+      }
+      .skill_hidden{
+           height: 0;
+        overflow: hidden;
+        animation-name: disappear;
+        animation-duration: 2s;
+      }
   }
   @media screen and (min-width:768px){
+    .div_superior{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-self: start;
+    }
+    .section_container{
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-width: 80vw;
+    }
+    .div_skills{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+        margin-bottom: auto;
+        gap:80px;
+        border: 1px solid var(--color-primary);
+        box-shadow: 0px 0px 10px 0px var(--color-primary);
+        padding: 20px;        
+        height: 25px;
+        width: 80%;
+    }
+    .arrow_down{
+        font-size: 2.25rem;
+    }
+    .div_front{
+        border-bottom: 1px solid var(--color-primary);
+        box-shadow: 0px -5px 10px 1px var(--color-primary) outset;
+    }.div_back{
+        border-top: 1px solid var(--color-primary);
+        box-shadow: 0px 5px 10px 1px var(--color-primary) outset;
+    }
+ 
     .section_img{
         display: flex;
         height: 200px;
-        width: 300px;
+        width: 500px;
         
     }
     .section_img img {
@@ -95,4 +130,16 @@
         filter: contrast(120%);
 
     }
+    .skill_show{
+        animation-name: appear;
+        animation-duration: 2s;
+        height:max-content;
+    
+      }
+      .skill_hidden{
+           height: 0;
+        overflow: hidden;
+        animation-name: disappear;
+        animation-duration: 2s;
+      }
   }
