@@ -1,15 +1,13 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { changeLanguage } from '../../Redux/Action'
+import {  useSelector } from 'react-redux'
+
 import About from '../About/About'
 import Skills from '../Skills/Skills'
 
 export default function LandingPage() {
-  const dispatch = useDispatch()
+ 
   const english = useSelector(state =>state.english)
-  const handleLanguage = ()=>{
-    dispatch(changeLanguage(!english))
-  }
+ 
   return (
     <div style={{marginTop:'5rem'}}>
       
@@ -18,7 +16,9 @@ export default function LandingPage() {
         <Skills />
       </section>
       
-      <section><h1 className='hidden'>hola<button onClick={(handleLanguage)}>ENG</button></h1></section>
+      <section >
+        <h1 className='hidden'>hola</h1>
+        </section>
       <section><h1 className='hidden'>algo</h1></section>
       
       

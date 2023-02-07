@@ -34,6 +34,11 @@ export default function NavBar() {
             idES:'languageLiES',
             idEN:'languageLiEN'
         })
+        hideToView({
+            english:english,
+            idES:'skillsES',
+            idEN:'skillsEN'
+        })
       
        },[english])
   return (
@@ -57,7 +62,14 @@ export default function NavBar() {
                     <BiHomeHeart  className={style.nav_icon} />Sobre Mi
                     </Link></li>
 
-                <li className={style.nav_li}>para</li>
+                <li className={style.nav_li} id='skillsES'>
+                    <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />Habilidades
+                    </Link></li>
+                <li className={style.nav_li} id='skillsEN'>
+                <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />Skills
+                    </Link></li>
                 <li className={style.nav_li}>probar</li>
                 <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}</li>
                 <li onClick={handleLanguage} id='languageLiEN' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Change Language'}</li>

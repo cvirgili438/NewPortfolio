@@ -48,7 +48,7 @@ export default function Skills() {
   return (
     <section className={s.section_container}>
        <div className={s.div_superior}>
-            <h1>Skills</h1>            
+            <h1>FullStack Skills</h1>            
         </div>
         <div onClick={handleShow} className={s.div_skills} >
             <AiOutlineCode className={s.arrow_down} />

@@ -48,8 +48,8 @@
         border-bottom: 1px solid var(--color-primary);
         box-shadow: 0px -5px 10px 1px var(--color-primary) outset;
     }.div_back{
-        border-top: 1px solid var(--color-primary);
-        box-shadow: 0px 5px 10px 1px var(--color-primary) outset;
+        border-bottom: 1px solid var(--color-primary);
+        box-shadow: 0px -5px 10px 1px var(--color-primary) outset;
     }
     .section_img{
         display: flex;
@@ -106,8 +106,8 @@
         border-bottom: 1px solid var(--color-primary);
         box-shadow: 0px -5px 10px 1px var(--color-primary) outset;
     }.div_back{
-        border-top: 1px solid var(--color-primary);
-        box-shadow: 0px 5px 10px 1px var(--color-primary) outset;
+        border-bottom: 1px solid var(--color-primary);
+        box-shadow: 0px -5px 10px 1px var(--color-primary) outset;  
     }
  
     .section_img{
