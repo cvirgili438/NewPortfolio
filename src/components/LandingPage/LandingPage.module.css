@@ -1,0 +1,34 @@
+.sendMe{   
+    justify-content: center;
+}
+.div_contact_icons{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.language{
+    display: inherit;
+    justify-content: center;
+    transition: all 1s;
+    transform:translateX(-100%);
+}
+.none{text-decoration: none;}
+
+@media screen and (max-width:768px){
+    .div_contact_icons{
+        display: flex;
+        flex-direction: column;
+    }
+    .language{
+        display: inherit;
+        justify-content: center;
+        transition: all 2s;
+        transform:translateX(0%);
+    }
+  }
+@media screen and (min-width:769px){
+    .language{
+        display: none;
+    }
+}

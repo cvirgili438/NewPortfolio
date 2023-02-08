@@ -85,10 +85,54 @@ body{
   animation-duration: 2s;
   opacity: 1;
 }
+.rol:nth-child(1){
+  transition-delay: 500ms;
+}
+.rol:nth-child(2){
+  transition-delay: 600ms;
+}
+.rol:nth-child(3){
+  transition-delay: 700ms;
+}
+.rol:nth-child(4){
+  transition-delay: 800ms;
+}
 
 /*  
 Phone querys
 */
 @media screen and (max-width:768px){
-    
+  .logoss {
+    width: 60%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+  }
+  .algo{
+    display: grid;
+    place-items: center;
+    align-content: center;  
+  }
+}
+@media screen and (min-width:769px){
+
+  .logoss {
+    width: 30%;
+    aspect-ratio: 3/2;
+    object-fit:contain;
+    mix-blend-mode: color-burn;
+  }
+  .algo{
+    display: grid;
+    place-items: center;
+    align-content: center;  
+  }
+  .rols{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    align-content: center;
+  }
+  
 }
