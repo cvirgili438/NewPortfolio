@@ -58,7 +58,7 @@ export default function Skills() {
             <div id='skillEN' >
                 <h2>Open to see </h2>
             </div>
-        <AiOutlineDownCircle id='arrow' className={s.arrow_down}/>
+        <AiOutlineDownCircle id='arrow' className={show ? s.arrow_up:s.arrow_down}/>
         </div>
         {/* aqui es el display de los skills*/}
         <div  id='skillsContent' >

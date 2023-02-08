@@ -2,6 +2,7 @@ import React from 'react'
 import {  useSelector } from 'react-redux'
 
 import About from '../About/About'
+import ContactMe from '../ContactMe/ContactMe'
 import Skills from '../Skills/Skills'
 
 export default function LandingPage() {
@@ -16,10 +17,13 @@ export default function LandingPage() {
         <Skills />
       </section>
       
-      <section >
-        <h1 className='hidden'>hola</h1>
+      <section className='section_contact' >
+        <div className='hidden'>
+          <ContactMe />
+
+        </div>
         </section>
-      <section><h1 className='hidden'>algo</h1></section>
+      <section ><h1 className='hidden'>algo</h1></section>
       
       
       

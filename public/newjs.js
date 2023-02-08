@@ -10,3 +10,23 @@ const observer =new IntersectionObserver((entries )=>{
 const hiddenElements=document.querySelectorAll('.hidden')
 
 hiddenElements.forEach((el)=>observer.observe(el))
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_cr62i0o';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
