@@ -17,8 +17,9 @@ export default function LandingPage() {
         <Skills />
       </section>
       
-      <section className='section_contact' >
+      <section id='contact' className='section_contact' >
         <div className='hidden'>
+          
           <ContactMe />
 
         </div>

@@ -29,6 +29,25 @@
   font-size: 24px;
   text-decoration: none;
   transition: 0.2s;
+  border-radius: .6rem;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+#button:hover{
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+    } 
+      100%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
 }
 
 .field{
