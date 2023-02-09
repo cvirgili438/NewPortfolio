@@ -36,7 +36,7 @@
         border-radius: 10px;
         box-shadow: 0 5px 5px 5px var(--color-primary);
         width: fit-content;
-        font-size: xx-large;
+        font-size: x-large;
 
     }
     .button:hover{

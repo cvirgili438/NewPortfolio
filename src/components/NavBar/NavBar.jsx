@@ -91,12 +91,12 @@ export default function NavBar() {
                 </Link>
                 </li>
                 <li className={style.nav_li}id='projectES'>
-                <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
+                <Link className={style.nav_link} onClick={handleShow} to='project' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Proyectos
                 </Link>
                 </li>
                 <li className={style.nav_li}id='projectEN'>
-                <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
+                <Link className={style.nav_link} onClick={handleShow} to='project' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Projects
                 </Link>
                 </li>
