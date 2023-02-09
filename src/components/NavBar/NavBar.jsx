@@ -44,6 +44,11 @@ export default function NavBar() {
             idES:'contactES',
             idEN:'contactEN'
         })
+        hideToView({
+            english:english,
+            idES:'projectES',
+            idEN:'projectEN'
+        })
       
        },[english])
   return (
@@ -70,20 +75,30 @@ export default function NavBar() {
                 <li className={style.nav_li} id='skillsES'>
                     <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Habilidades
-                    </Link></li>
+                </Link></li>
                 <li className={style.nav_li} id='skillsEN'>
                 <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Skills
-                    </Link></li>
+                </Link></li>
                 <li className={style.nav_li} id='contactEN'>
                 <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Contact Me
-                    </Link>
+                </Link>
                 </li>
                 <li className={style.nav_li}id='contactES'>
                 <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
                     <BiHomeHeart  className={style.nav_icon} />Contactame
-                    </Link>
+                </Link>
+                </li>
+                <li className={style.nav_li}id='projectES'>
+                <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />Proyectos
+                </Link>
+                </li>
+                <li className={style.nav_li}id='projectEN'>
+                <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
+                    <BiHomeHeart  className={style.nav_icon} />Projects
+                </Link>
                 </li>
                 <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}</li>
                 <li onClick={handleLanguage} id='languageLiEN' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Change Language'}</li>

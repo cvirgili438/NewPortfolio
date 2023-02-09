@@ -9,6 +9,7 @@ import whatsApp from '../../utils/whatsapp/ChatOnWhatsAppButton/WhatsAppButtonGr
 import gmail from '../../utils/gmail/gmail.png'
 import linkedIn from '../../utils/LinkedIn/LI-Logo.png'
 import pdf from '../../utils/PDF_file_icon.png'
+import Project from '../Project/Project'
 
 export default function LandingPage() {
  
@@ -38,7 +39,9 @@ export default function LandingPage() {
       <section id='skills' >
         <Skills />
       </section>
-      
+      <section id='project'>
+      <Project />
+      </section>
       <section id='contact' className='section_contact' >
         <div className='hidden'>
           <div className={s.div_contact_icons}>
