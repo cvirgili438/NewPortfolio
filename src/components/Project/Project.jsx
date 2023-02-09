@@ -24,10 +24,12 @@ const Project = () => {
             <h1 id='ProjectEN' >My Projects</h1>
             <h1 id='ProjectES' >Mis Proyectos</h1>
         </div>
-        <Modal />
+        
        
-        <div className='imgProject' >
+        <div  >
+            <h1>Henry Gadget</h1>            
             <img  src={imagen1}   alt='img not found' className={st.gif} />
+            <Modal />
             
         </div>
       

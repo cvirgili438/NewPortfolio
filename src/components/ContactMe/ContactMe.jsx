@@ -1,9 +1,17 @@
 import React from 'react';
 import './ContactMe.css'
 import TextField from '@mui/material/TextField';
+import { validateEmail } from '../../utils/function';
+
+
 
 const ContactMe = () => {
-
+  let [error,setError]=React.useState(true)
+  
+let handleError = (e)=>{
+ if(validateEmail(e.target.value) === false)setError(true)
+ if(validateEmail(e.target.value)=== true) setError(false)
+}
     
     return (
         <form id="form">
@@ -18,11 +26,13 @@ const ContactMe = () => {
   </div> 
   <div className="field">        
     <TextField   
+    helperText={error===true ? 'Please insert a valid E-mail':''}
+    onChange={e=>{handleError(e)}}
+    error={error}
     sx={{width:'70%'}}
         name='from_email' 
         id="from_email"
-        label="Email"
-        
+        label="Email"        
         variant='standard'
         multiline/>
   </div> 
@@ -39,7 +49,7 @@ const ContactMe = () => {
   </div>
  
 
-  <input type="submit" id="button" value="Send Email" />
+  <input disabled={error} type="submit" id="button" value="Send Email" />
 </form>
     );
 };

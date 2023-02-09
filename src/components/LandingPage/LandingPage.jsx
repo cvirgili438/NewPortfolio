@@ -25,6 +25,11 @@ export default function LandingPage() {
       idES:'languageES',
       idEN:'languageEN'
     })
+    hideToView({
+      english:english,
+      idES:'h1ContactMeES',
+      idEN:'h1ContactMeEN'
+    })
 
   },[english])
  
@@ -42,7 +47,10 @@ export default function LandingPage() {
       <section id='project'>
       <Project />
       </section>
+      <hr/>
       <section id='contact' className='section_contact' >
+        <h1 id='h1ContactMeEN' className={s.h1Contact} >Contact me through  :</h1>
+        <h1 id='h1ContactMeES'  className={s.h1Contact} >Contactame via :</h1>
         <div className='hidden'>
           <div className={s.div_contact_icons}>
           <div className='rols'>
