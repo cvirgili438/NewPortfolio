@@ -4,7 +4,9 @@ import { BsMenuUp } from "react-icons/bs";
 //import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-scroll";
 import { BiHomeHeart } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose,AiOutlineCopy,AiOutlinePhone } from "react-icons/ai";
+import { BsArchive } from "react-icons/bs";
+
 import { GrLanguage } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLanguage } from '../../Redux/Action'
@@ -74,30 +76,30 @@ export default function NavBar() {
 
                 <li className={style.nav_li} id='skillsES'>
                     <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Habilidades
+                    <AiOutlineCopy  className={style.nav_icon} />Habilidades
                 </Link></li>
                 <li className={style.nav_li} id='skillsEN'>
                 <Link className={style.nav_link} onClick={handleShow} to='skills' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Skills
+                    <AiOutlineCopy  className={style.nav_icon} />Skills
                 </Link></li>
                 <li className={style.nav_li} id='contactEN'>
                 <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Contact Me
+                    <AiOutlinePhone  className={style.nav_icon} />Contact Me
                 </Link>
                 </li>
                 <li className={style.nav_li}id='contactES'>
                 <Link className={style.nav_link} onClick={handleShow} to='contact' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Contactame
+                    <AiOutlinePhone  className={style.nav_icon} />Contactame
                 </Link>
                 </li>
                 <li className={style.nav_li}id='projectES'>
                 <Link className={style.nav_link} onClick={handleShow} to='project' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Proyectos
+                    <BsArchive  className={style.nav_icon} />Proyectos
                 </Link>
                 </li>
                 <li className={style.nav_li}id='projectEN'>
                 <Link className={style.nav_link} onClick={handleShow} to='project' smooth={true}>                        
-                    <BiHomeHeart  className={style.nav_icon} />Projects
+                    <BsArchive  className={style.nav_icon} />Projects
                 </Link>
                 </li>
                 <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}</li>
