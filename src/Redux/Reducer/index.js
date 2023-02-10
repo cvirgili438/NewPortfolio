@@ -1,4 +1,4 @@
-import { inicialstate,SWITCH_LANGUAGE } from "../Constants";
+import { inicialstate,SWITCH_LANGUAGE,SWITCH_MODE } from "../Constants";
 
 
 
@@ -9,6 +9,11 @@ export default function rootReducer(state = inicialstate, action) {
             return {
                 ...state,
                 english:action.payload
+            }
+        case SWITCH_MODE:
+            return {
+                ...state,
+                dark:action.payload
             }
         default: 
             return {...state}

@@ -4,8 +4,8 @@ body{
   background-color: var(--color-secondary);
 }
 .darkmode{
-  color: var(--color-darkmode-primary);
-  background-color: var(--color-darkmode-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 .App {
   text-align: center;
