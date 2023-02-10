@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 import { BiHomeHeart } from "react-icons/bi";
 import { AiOutlineClose,AiOutlineCopy,AiOutlinePhone } from "react-icons/ai";
 import { BsArchive } from "react-icons/bs";
+import { HiOutlineSun,HiOutlineMoon } from "react-icons/hi2";
 
 import { GrLanguage } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,6 +21,7 @@ export default function NavBar() {
     const handleShow = ()=>{
         setActive(!active)
     }    
+    const dark = useSelector(state=>state.dark)
     const english = useSelector(state=>state.english)
     const handleLanguage = ()=>{
         dispatch(changeLanguage(!english))
@@ -50,6 +52,11 @@ export default function NavBar() {
             english:english,
             idES:'projectES',
             idEN:'projectEN'
+        })
+        hideToView({
+            english:english,
+            idES:'themeES',
+            idEN:'themeEN'
         })
       
        },[english])
@@ -102,8 +109,19 @@ export default function NavBar() {
                     <BsArchive  className={style.nav_icon} />Projects
                 </Link>
                 </li>
-                <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}</li>
-                <li onClick={handleLanguage} id='languageLiEN' className={style.nav_li}><GrLanguage className={style.nav_icon}/>{'Change Language'}</li>
+                <li onClick={handleLanguage} id='languageLiES' className={style.nav_li}>
+                    <GrLanguage className={style.nav_icon}/>{'Cambiar idioma'}
+                </li>
+                <li onClick={handleLanguage} id='languageLiEN' className={style.nav_li}>
+                    <GrLanguage className={style.nav_icon}/>{'Change Language'}
+                </li>
+                <li id='themeEN' className={style.nav_li} >
+                   <HiOutlineMoon className={style.nav_icon}/> Change Theme
+                </li>
+                <li id='themeES' className={style.nav_li} >
+                   <HiOutlineMoon className={style.nav_icon} /> Cambiar Tema
+                </li>
+                
                 
             </ul>
             
