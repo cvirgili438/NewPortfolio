@@ -96,11 +96,17 @@
       top:-100%;
       left:0;
       width: 100%;
-      background-color: var(--color-primary);
+     
       padding:2rem 0 4rem;
       box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
       border-radius: 0 0 2rem 2rem;
       transition: .5s
+    }
+    #light .nav_menu {
+      background-color: var(--color-primary);
+    }
+    #dark .nav_menu {
+      background-color: var(--color-secondary);
     }
     .nav_ul{
         display:grid;

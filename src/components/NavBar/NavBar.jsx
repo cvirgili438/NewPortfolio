@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import style from './NavBar.module.css'
 import { BsMenuUp } from "react-icons/bs";
 //import { animateScroll as scroll } from "react-scroll";
@@ -11,7 +11,6 @@ import { GrLanguage } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLanguage } from '../../Redux/Action'
 import { hideToView } from '../../utils/function';
-import { useContext } from 'react';
 import { ThemeContext } from '../../App';
 
 
@@ -26,7 +25,7 @@ export default function NavBar() {
         setActive(!active)
     }
     const handleTheme = ()=>{
-        setTheme((curr)=> { console.log(curr)
+        setTheme((curr)=> { 
             return curr === 'light' ? 'dark' : 'light'})
             setActive(!active)
     }

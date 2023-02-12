@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { hideToView } from '../../utils/function';
 import { aboutEN, aboutES } from '../../utils/stringConst';
 import s from './About.module.css'
 import image from '../../utils/perfil.jpeg'
+import { ThemeContext } from '../../App';
 
 
 export default function About(props) {
+  const {theme} = useContext(ThemeContext)
     const [more,setMore]=React.useState(false)
     React.useEffect(()=>{
         hideToView({
@@ -28,7 +30,7 @@ export default function About(props) {
        const seeMoreEN= aboutEN.slice(0,150).concat('...')
        const handleMore = ()=>setMore(!more)
   return (
-    <div className={s.about_container}>
+    <div className={s.about_container} id={s[theme]}>
       <div>
         <img className={s.image_profile} src={image} alt='ProfileIMG'  />
         </div>
