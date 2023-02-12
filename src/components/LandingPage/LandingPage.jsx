@@ -35,8 +35,10 @@ export default function LandingPage() {
   },[english])
  
   return (
-    <div style={{marginTop:'6rem'}}  id={s[theme]} >
-      
+    <div   id={s[theme]} >
+      <div style={{height:'6rem'}}>
+
+      </div>
       <section id='about'>
         <h1 id='languageEN' className={s.language}> You can change the language<br/> in the navbar </h1>
         <h1 id='languageES' className={s.language}> Puedes cambiar el lenguaje <br/>en la barra de navegación </h1>
