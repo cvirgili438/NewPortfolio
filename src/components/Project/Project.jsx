@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import imagen1 from '../../utils/wallpaper.gif'
 import Modal from '../Modal/Modal';
-
+import {ThemeContext} from '../../App'
 import { useSelector } from 'react-redux';
 import st from './Project.module.css'
 import { hideToView } from '../../utils/function';
@@ -9,6 +9,7 @@ import { hideToView } from '../../utils/function';
 
 const Project = () => {
     const english = useSelector(state=>state.english)
+    const {theme} = useContext(ThemeContext)
     React.useEffect(()=>{
         hideToView({
             english:english,
@@ -19,7 +20,7 @@ const Project = () => {
   
     return (
     <div
-    className={st.container}> 
+    className={st.container} id={st[theme]}> 
         <div>
             <h1 id='ProjectEN' >My Projects</h1>
             <h1 id='ProjectES' >Mis Proyectos</h1>

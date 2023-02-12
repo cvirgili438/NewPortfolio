@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {  useSelector } from 'react-redux'
 import { hideToView } from '../../utils/function'
 import s from './LandingPage.module.css'
@@ -10,9 +10,10 @@ import gmail from '../../utils/gmail/gmail.png'
 import linkedIn from '../../utils/LinkedIn/LI-Logo.png'
 import pdf from '../../utils/PDF_file_icon.png'
 import Project from '../Project/Project'
+import { ThemeContext } from '../../App'
 
 export default function LandingPage() {
- 
+ const {theme} = useContext(ThemeContext)
   const english = useSelector(state =>state.english)
   React.useEffect(()=>{
     hideToView({
@@ -34,7 +35,7 @@ export default function LandingPage() {
   },[english])
  
   return (
-    <div style={{marginTop:'6rem'}}>
+    <div style={{marginTop:'6rem'}}  id={s[theme]} >
       
       <section id='about'>
         <h1 id='languageEN' className={s.language}> You can change the language<br/> in the navbar </h1>

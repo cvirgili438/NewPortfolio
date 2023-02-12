@@ -26,23 +26,50 @@
         transition: all 2s;
         transform:translateX(0%);
     }
-    .h1Contact{
+    
+    #light .h1Contact {
+        border: 5px solid rgba(137, 43, 226, 0.637);
         margin: auto;
-        justify-content: center;
+        justify-content: center;        
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: fit-content;
+        border-radius: 10px;
+    }
+    #dark .h1Contact {
+        border: 5px solid var(--color-secondary);
+        margin: auto;
+        justify-content: center;        
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: fit-content;
+        border-radius: 10px;
     }
   }
 @media screen and (min-width:769px){
     .language{
         display: none;
     }
-    .h1Contact{
-        margin: auto;
-        justify-content: center;
-        border-radius: 10px;
+    #light .h1Contact {
         border: 5px solid rgba(137, 43, 226, 0.637);
+        margin: auto;
+        justify-content: center;        
         border-top: none;
         border-left: none;
         border-right: none;
         width: fit-content;
+        border-radius: 10px;
+    }
+    #dark .h1Contact {
+        border: 5px solid var(--color-secondary);
+        margin: auto;
+        justify-content: center;        
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: fit-content;
+        border-radius: 10px;
     }
 }

@@ -1,13 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import s from './Skills.module.css'
 import { AiOutlineDownCircle,AiOutlineCode } from "react-icons/ai";
 import { hideToView } from '../../utils/function';
 import { useSelector } from 'react-redux';
 import { imgArrayBack,imgArrayFront } from '../../utils/stringConst';
+import { ThemeContext } from '../../App';
 
 
 export default function Skills() {
-    
+    const {theme} = useContext(ThemeContext)
     const [show,setShow]= React.useState(false)
     const handleShow = (e)=>{
         let content = document.getElementById('skillsContent')
@@ -46,7 +47,7 @@ export default function Skills() {
     },[english,show])
 
   return (
-    <section className={s.section_container}>
+    <section className={s.section_container} id={s[theme]} >
        <div className={s.div_superior}>
             <h1>FullStack Skills</h1>            
         </div>

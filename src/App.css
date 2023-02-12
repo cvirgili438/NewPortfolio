@@ -1,9 +1,10 @@
 @import url(theme.css);
-body{
+
+#light {
   color: var(--color-primary);
   background-color: var(--color-secondary);
 }
-.darkmode{
+#dark {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 }
