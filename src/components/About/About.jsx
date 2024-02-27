@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { hideToView } from '../../utils/function';
 import { aboutEN, aboutES } from '../../utils/stringConst';
 import s from './About.module.css'
-import image from '../../utils/perfil.jpeg'
+import image from '../../utils/perfil.jpg'
 import { ThemeContext } from '../../App';
 
 
